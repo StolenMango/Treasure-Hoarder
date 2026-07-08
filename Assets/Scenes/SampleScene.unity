@@ -716,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveCooldown: 0.15
   wallTilemap: {fileID: 110022896}
-  treasureTilemap: {fileID: 0}
+  treasureTilemap: {fileID: 2033029755}
 --- !u!212 &424103383
 SpriteRenderer:
   serializedVersion: 2

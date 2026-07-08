@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
              // treasure check (after move)
             Vector3Int currentCell = new Vector3Int(gridPos.x, gridPos.y, 0);
 
-            Debug.Log("Checking treasure at: " + currentCell);
+            Debug.Log($"Checking {currentCell}, HasTile = {treasureTilemap.HasTile(currentCell)}");
             Debug.Log("Treasure Tilemap assigned? " + (treasureTilemap != null));
             
             if (treasureTilemap != null && treasureTilemap.HasTile(currentCell))
