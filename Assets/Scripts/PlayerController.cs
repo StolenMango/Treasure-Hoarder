@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Tilemap treasureTilemap;
     public BagController bagController;
     public TreasureData testTreasure;
+    public Tilemap homeBaseTilemap;
 
     
     void Start()
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Treasure Tilemap assigned? " + (treasureTilemap != null));
             
             if (treasureTilemap != null && treasureTilemap.HasTile(currentCell))
-{
+            {
                 bool added = bagController.AddItem(testTreasure);
 
                 if (added)
@@ -67,7 +68,13 @@ public class PlayerController : MonoBehaviour
                     treasureTilemap.SetTile(currentCell, null);
                     Debug.Log("Added Ruby to the bag");
                 }
-}
+            }
+
+            if (homeBaseTilemap != null && homeBaseTilemap.HasTile(currentCell))
+            {
+                bagController.EmptyBag();
+                Debug.Log("Returned to home base!");
+            }
             //cooldown reset
             timer = 0f;
         }

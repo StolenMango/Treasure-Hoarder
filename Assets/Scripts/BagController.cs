@@ -22,4 +22,11 @@ public class BagController : MonoBehaviour
 
     return true;
 }
+
+public void EmptyBag()
+{
+    items.Clear();
+
+    Debug.Log("Bag emptied.");
+}
 }
